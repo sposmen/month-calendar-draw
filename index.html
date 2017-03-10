@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        .gray{
+            color: #989898;
+        }
+        .today{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div style="text-align: center;">
+    <div id="calendar"></div>
+</div>
+
+<div style="text-align: center;">
+    <div id="calendar2"></div>
+</div>
+<script src="script/drawMonth.js" type="application/javascript"></script>
+<script type="application/javascript">
+    new DrawMonthCalendar('calendar');
+
+    new DrawMonthCalendar('calendar2', {
+        date: new Date(2000,0,1),
+        months: ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"],
+        days: ['D','L','M','W','J','V','S']
+    })
+</script>
+</body>
+</html>
